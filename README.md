@@ -13,9 +13,13 @@ The game is developed using Object Oriented Programming. It is written in Java a
 
 ## Program Structure
 Since this game takes the structure of a Finite State Machine, it's important to establish a structure for how each node is related.
+
 ![image](https://user-images.githubusercontent.com/107002749/189468159-03dc23b1-f21b-4961-9d48-a6578d410d7e.png)
 
 Also due to the fact that I programmed this game in Java, it is important to have a solid plan for how each Java class interacts.
+
+![image](https://user-images.githubusercontent.com/107002749/189468562-3c8e39fa-9e53-4be5-8e71-9a0fc403a2c8.png)
+
 
 
 
