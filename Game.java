@@ -145,17 +145,18 @@ public class Game {
         this.currentNode = head;
         // First Choice
         while (currentNode != null || currentNode.equals(leaveRoom)) {
+            if (currentNode.equals(leaveRoom)) {
+                currentNode.process();
+                putText("You have beat Anonymity.", "\033[0;1m");
+                putText("Thanks for playing!", "\033[0;1m");
+
+                putText(false, "Press Enter to return to the Title Screen");
+                Scanner gameStarter = new Scanner(System.in); // Create a Scanner object
+                String startInput = gameStarter.nextLine(); // Read user input
+                break;
+            }
             currentNode = currentNode.process();
             System.out.print(Game.CLEAR_SCREEN);
-        }
-        if (currentNode.equals(leaveRoom)) {
-            currentNode.process();
-            putText("You have beat Anonymity.", "\033[0;1m");
-            putText("Thanks for playing!", "\033[0;1m");
-
-            putText("Press Enter to return to the Title Screen");
-            Scanner gameStarter = new Scanner(System.in); // Create a Scanner object
-            String startInput = gameStarter.nextLine(); // Read user input
         }
     }
 
