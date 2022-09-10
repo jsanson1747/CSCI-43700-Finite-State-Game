@@ -27,6 +27,8 @@ This file repo contains a makefile that will manage the dependencies of building
 
 **To recompile and run the game type** `make run`
 
+The game can also be run using Anonymity.jar via `java -jar Anonymity.jar`
+
 
 
 
