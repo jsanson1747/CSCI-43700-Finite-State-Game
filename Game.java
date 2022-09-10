@@ -145,7 +145,7 @@ public class Game {
 
         this.currentNode = head;
         // First Choice
-        while (currentNode != null || currentNode.equals(leaveRoom)) {
+        while (currentNode != null || !currentNode.equals(leaveRoom)) {
             if (currentNode.equals(leaveRoom)) {
                 currentNode.process();
                 putText("You have beat Anonymity.", "\033[0;1m");
