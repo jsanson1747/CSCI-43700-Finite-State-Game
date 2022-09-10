@@ -14,6 +14,7 @@ public class Game {
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_CYAN_BG = "\u001B[46m";
 
     public static final String CLEAR_SCREEN = "\033[H\033[2J";
 
@@ -177,17 +178,20 @@ public class Game {
             System.out.println("");
             colorTitle(titleList);
 
-            putText("Type \"About\" for details");
+            putText("Type \"About\" for details or \"Quit\" to quit");
             putText(false, "Type \"Start\" to start >>> ");
 
             Scanner gameStarter = new Scanner(System.in); // Create a Scanner object
             String startInput = gameStarter.nextLine(); // Read user input
 
-            if (startInput.equals("Start")) {
+            if (startInput.equals("Start") || startInput.equals("start")) {
                 isStarted = true;
-            } else if (startInput.equals("About")) {
+            } else if (startInput.equals("About") || startInput.equals("about")) {
                 creditsMenu();
                 System.out.print(CLEAR_SCREEN);
+            } else if (startInput.equals("Quit") || startInput.equals("quit")) {
+                putText("[Exiting Game]\n", ANSI_RED);
+                System.exit(0);
             } else {
                 System.out.print(CLEAR_SCREEN);
             }
