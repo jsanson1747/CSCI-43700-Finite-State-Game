@@ -21,7 +21,11 @@ Also due to the fact that I programmed this game in Java, it is important to hav
 ![image](https://user-images.githubusercontent.com/107002749/189468562-3c8e39fa-9e53-4be5-8e71-9a0fc403a2c8.png)
 
 ## Running the Game
-This file repo contains a makefile that 
+This file repo contains a makefile that will manage the dependencies of building the executable.
+
+**In order to clean the repo of any old .class files type** `make clean`
+
+**To recompile and run the game type** `make run`
 
 
 
